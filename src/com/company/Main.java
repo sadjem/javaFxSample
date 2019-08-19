@@ -34,19 +34,9 @@ public class Main extends Application {
 
         board.drawAll();
 
-        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                board.keyPressed(event);
-            }
-        });
+        scene.setOnKeyPressed(event -> board.keyPressed(event));
 
-        scene.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                board.mousePressed(event);
-            }
-        });
+        scene.setOnMousePressed(event -> board.mousePressed(event));
 
     }
 }
